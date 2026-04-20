@@ -1,0 +1,89 @@
+:root {
+  --font: Overpass Mono, monospace;
+  --hue: 185;
+  --page-bg:  hsl(var(--hue), 90%, 11%);
+  --text: hsl(var(--hue), 90%, 95%);
+  --canvas-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--page-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100vh;
+  font-family: var(--font);
+  color: var(--text);
+  overflow: hidden;
+  gap: 16px;
+}
+
+#canvas {
+  background: #fff0f3;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100vh;
+  touch-action: none;
+}
+
+#main {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(20px);
+  max-width: 20em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.067);
+  border-bottom-right-radius: 10px;
+  background-color: #ff758e7e;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#main h1 {
+  font-size: 18px;
+}
+
+#main label {
+  font-size: 14px;
+}
+
+#main #frictionValue,
+#main #weightValue,
+#main #pullValue {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.502)
+}
+
+#debug {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+#clearBtn {
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  max-width: 100px;
+}
+
+input[type="range"] {
+  accent-color: #ff6481;
+}
+
+

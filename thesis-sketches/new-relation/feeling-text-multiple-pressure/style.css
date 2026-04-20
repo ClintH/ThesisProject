@@ -1,0 +1,97 @@
+:root {
+  --font: Overpass Mono, monospace;
+  --canvas-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  font-family: var(--font);
+  overflow: hidden;
+}
+
+#canvas {
+  background: var(--canvas-bg);
+  flex: 1 1 auto;
+  min-width: 0;
+  touch-action: none;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 16px;
+  backdrop-filter: blur(20px);
+  color: rgba(0, 0, 0, 0.45);
+}
+
+#debug {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#toggleBtn {
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font);
+  border: 1px solid #aaa;
+  background: #e8d4f0;
+  border-radius: 4px;
+}
+
+#toggleBtn.tilt {
+  background: #d4e8f0;
+}
+
+#vizGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#vizCanvas {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  display: block;
+  flex-shrink: 0;
+}
+
+#vizCanvas.hidden {
+  display: none;
+}
+
+#vizToggleBtn {
+  cursor: pointer;
+  font-size: 12px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.25);
+  transition: color 0.15s;
+}
+
+#vizToggleBtn:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#vizToggleBtn.hidden {
+  color: rgba(0, 0, 0, 0.15);
+}

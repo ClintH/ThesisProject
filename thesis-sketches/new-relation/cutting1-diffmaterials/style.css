@@ -1,0 +1,96 @@
+:root {
+  --font: Overpass Mono, monospace;
+  --hue: 185;
+  --page-bg:  hsl(var(--hue), 90%, 11%);
+  --text: hsl(var(--hue), 90%, 95%);
+  --canvas-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"] {
+  accent-color: #ff6481;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: #0f0f0f;
+  font-family: var(--font);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#toolbar {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 8px;
+  background-color: #1e1d1d;
+  flex-shrink: 0;
+}
+
+.blend-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#blend-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 140px;
+  height: 10px;
+  border-radius: 5px;
+  background: #4f4f4f;
+  outline: none;
+  cursor: pointer;
+}
+#blend-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+#blend-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+}
+
+canvas {
+  display: block;
+  cursor: none;
+  touch-action: none;
+  -webkit-touch-callout: none;
+}
+
+#debug {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.38);
+  white-space: pre;
+  pointer-events: none; /* clicks pass through to canvas */
+  z-index: 10;
+}
+
+#label {
+  position: fixed;
+  top: 50px;
+  left:12px;
+  font-size: 12px;
+  max-width: 30%;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.38);
+  pointer-events: none;
+  z-index: 10;
+}

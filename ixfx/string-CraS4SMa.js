@@ -1,0 +1,1 @@
+const e=(e,t=``,n=`?`)=>{if(typeof e!=`string`)return{success:!1,error:`Param '${n} is not type string. Got: ${typeof e}`};switch(t){case`non-empty`:if(e.length===0)return{success:!1,error:`Param '${n} is empty`};break}return{success:!0,value:e}};export{e as t};

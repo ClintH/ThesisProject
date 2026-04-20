@@ -1,0 +1,43 @@
+:root {
+  --font: Overpass Mono, monospace;
+  --hue: 185;
+  --page-bg:  hsl(var(--hue), 90%, 11%);
+  --text: hsl(var(--hue), 90%, 95%);
+  --canvas-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--page-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  font-family: var(--font);
+  color: var(--text);
+  overflow: hidden;
+  gap: 16px; 
+}
+
+#canvas {
+  background: var(--canvas-bg);
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100vh;
+  touch-action: none;
+  margin: 0;
+}
+
+#debug {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+
+

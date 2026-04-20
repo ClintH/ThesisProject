@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ixfx demos</title>
+  <link rel="stylesheet" href="./demos.css">
+</head>
+
+<body>
+  <main>
+      <h1>Sketches</h1>
+      <section>
+        <div>
+          <p>Here I have all the sketches that I made during the process of writing my thesis. They are not polished, but they are a good way to see the process of how I arrived at my final results.</p>
+        </div>
+        <div>
+          <h2>Playgrounds</h2>
+          <p class ="description">These sketches allow you to discover physicality in different interactions by yourself. In each sketch you have sliders that allow you to change the behaviour of the system.</p>
+          <ul class="nobullets">
+            <li>/ <a href="./thesis-sketches/new-playground/">playground</a></li>
+          </ul>
+          <h2>texture as a trace</h2>
+          <p class ="description">These sketches allow you to discover physicality in different interactions by yourself. In each sketch you have sliders that allow you to change the behaviour of the system.</p>
+          <ul class="nobullets">
+            <li>/ <a href="./thesis-sketches/new-trace/">square warming up</a></li>
+          </ul>
+          <h2>texture character</h2>
+          <p class ="description">These sketches allow you to discover physicality in different interactions by yourself. In each sketch you have sliders that allow you to change the behaviour of the system.</p>
+          <ul class="nobullets">
+            <li>/ <a href="./thesis-sketches/new-character/">feeling text elements</a></li>
+          </ul>
+          <h2>feeling text</h2>
+          <p class ="description">These sketches allow you to discover physicality in different interactions by yourself. In each sketch you have sliders that allow you to change the behaviour of the system.</p>
+          <ul class="nobullets">
+            <li>/ <a href="./thesis-sketches/new-relation/">feeling text boundaries</a></li>
+          </ul>
+        </div>
+
+      </section>
+  </main>
+
+  <script type="module">
+    const host = window.location.host;
+
+    if (host.endsWith(`github.io`) || host.endsWith('.fun')) {
+      const el = document.getElementById(`local`);
+      document
+        .querySelectorAll(`.local`)
+        .forEach((el) => (el.style.display = `none`));
+    }
+  </script>
+</body>
+
+</html>

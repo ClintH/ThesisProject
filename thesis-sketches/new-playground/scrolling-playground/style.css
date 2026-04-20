@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: Overpass Mono, monospace;
+  background: hsl(185, 90%, 11%);
+}
+
+#canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(20px);
+  max-width: 20em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.067);
+  border-bottom-right-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.406);
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#main h1 {
+  font-size: 18px;
+}
+
+#main label {
+  font-size: 14px;
+}
+
+#main #frictionValue,
+#main #weightValue,
+#main #pullValue {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.502);
+}
+
+#debug {
+  font-size: 10px;
+  opacity: 0.5;
+  max-width: 22em;
+}

@@ -1,0 +1,58 @@
+{
+  "name": "ixfx-demos",
+  "version": "1.0.0",
+  "description": "Demos of ixfx",
+  "main": "index.html",
+  "private": "true",
+  "type": "module",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "clone:npm": "node copy-for-npm.js",
+    "clone:light": "node copy-for-light.js",
+    "clone": "concurrently npm:clone:*",
+    "copy:mlmodels": "copyfiles --up 3 \"../ml-vision/models/*.*\" ./ml/lib/",
+    "copy:ml": "rimraf ./ml/lib && npx copyfiles --up 3 \"../ml-vision/dist/**/*\" ./ml/lib && copyfiles --up 3 \"../ml-vision/wasm/*.*\" ./ml/lib/",
+    "serve:ws": "node ws-server.js",
+    "serve:http": "five-server",
+    "serve:express": "node express-ws-server.js",
+    "serve": "concurrently npm:serve:*",
+    "ngrok": "ngrok start --all --config ./ngrok.yml",
+    "start": "npm run serve:express",
+    "typecheck": "tsc -p jsconfig.json --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixfxfun/demos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ixfxfun/demos/issues"
+  },
+  "homepage": "https://github.com/ixfxfun/demos#readme",
+  "dependencies": {
+    "@html-eslint/eslint-plugin": "0.54.0",
+    "@html-eslint/parser": "0.54.0",
+    "@stylistic/eslint-plugin": "5.7.1",
+    "eslint": "9.39.2",
+    "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "body-parser": "^2.2.2",
+    "concurrently": "^9.2.1",
+    "copyfiles": "^2.4.1",
+    "cpy": "^12.1.0",
+    "del": "^8.0.1",
+    "express": "^5.2.0",
+    "express-ws": "^5.0.2",
+    "replace-in-file": "8.4.0",
+    "rimraf": "^6.1.2",
+    "ws": "^8.19.0"
+  },
+  "stackblitz": {
+    "startCommand": "concurrently 'npm:serve:*'"
+  }
+}

@@ -1,0 +1,1 @@
+const e=(e=5)=>{let t=typeof e==`number`?{length:e}:e,n=t.source??Math.random,r=t.length??5,i=``;for(;i.length<r;)i+=n().toString(36).slice(2);return i.substring(0,r)};export{e as t};

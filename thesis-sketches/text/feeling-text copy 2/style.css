@@ -1,0 +1,69 @@
+:root {
+  --font: Overpass Mono, monospace;
+  --hue: 185;
+  --page-bg:  hsl(var(--hue), 90%, 11%);
+  --text: hsl(var(--hue), 90%, 95%);
+  --canvas-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100vh;
+  font-family: var(--font);
+  color: var(--text);
+  overflow: hidden;
+  gap: 16px;
+}
+
+#canvas {
+  background: var(--canvas-bg);
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100vh;
+  touch-action: none;
+  margin: 0;
+}
+
+#main {
+  position: absolute;
+  color:black;
+  backdrop-filter: blur(20px);
+  max-width: 20em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.067);
+  border-radius: 10px;
+}
+
+#debug {
+  font-size: 12px;
+  opacity: 0.5;
+
+}
+
+#loose {
+  width: 100%;  
+}
+
+#clearBtn {
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  max-width: 100px;
+}
+
+

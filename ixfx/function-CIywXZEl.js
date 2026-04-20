@@ -1,0 +1,1 @@
+const e=e=>e instanceof Function,t=(e,t=`?`)=>e===void 0?{success:!1,error:`Param '${t}' is undefined. Expected: function.`}:e===null?{success:!1,error:`Param '${t}' is null. Expected: function.`}:typeof e==`function`?{success:!0,value:e}:{success:!1,error:`Param '${t}' is type '${typeof e}'. Expected: function`};export{e as n,t};

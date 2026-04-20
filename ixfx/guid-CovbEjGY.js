@@ -1,0 +1,1 @@
+const e=(e={})=>{let t=e.source??Math.random,n=Math.trunc(t()*46656),r=Math.trunc(t()*46656);return`000${n.toString(36)}`.slice(-3)+`000${r.toString(36)}`.slice(-3)};export{e as t};

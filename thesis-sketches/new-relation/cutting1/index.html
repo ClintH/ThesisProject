@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cut</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toolbar">
+  <span class="blend-label">Razor</span>
+  <input type="range" id="blend-slider" min="0" max="100" step="1" value="0">
+  <span class="blend-label">Scissors</span>
+</div>
+<div id="debug"></div>
+<div id="label">
+  <p>In this sketch you dial a tool from razor to scissors which changes the behavior of the cursor. Different dials afford different types of cutting e.g. razor sharp and straight cuts, scissors more control and flexibility in cutting.</p>
+</div>
+<canvas id="c"></canvas>
+<script type="importmap">{ "imports": { "@ixfx":"/ixfx/core.js", "@ixfx/": "/ixfx/" } }</script>
+<script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+import{r as e}from"./resolve-el-bCUqks7C.js";function t(e,t){return r(`textContent`,e,t)}function n(e,t){return r(`innerHTML`,e,t)}function r(t,n,r){let i=[],a=r=>{let a=typeof r,o=a===`string`||a===`number`||a===`boolean`?r:JSON.stringify(r);i.length===0&&(i=e(n));for(let e of i)e[t]=o;return o};return r===void 0?a:a(r)}export{r as n,t as r,n as t};

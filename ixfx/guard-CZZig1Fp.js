@@ -1,0 +1,1 @@
+const e=e=>e.quadratic!==void 0,t=e=>e.cubic1!==void 0&&e.cubic2!==void 0;export{e as n,t};
