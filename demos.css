@@ -7,11 +7,11 @@
 }
 
 :root {
-  --sl-color-accent: #ff55cc;       /* visited links — muted purple */
-  --sl-color-accent-high: #ff55cc;  /* links — bright purple */
-  --sl-color-white: #cc88ff;        /* h1 — hot pink */
-  --sl-color-teal: #6644cc;         /* h2 — soft lavender */
-  --sl-color-black: #ffffff;        /* background — lime */
+  --sl-color-accent: #ff2abf; 
+  --sl-color-accent-high: #ff55cc;
+  --sl-color-white: #000000;
+  --sl-color-teal: #000000;
+  --sl-color-black: #ffffff;
 }
 
 html {
@@ -56,7 +56,7 @@ section > div {
 h1 {
   color: var(--sl-color-white);
   font-size: 3em;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 0.1em;
   margin-bottom: 0.3em;
 }
@@ -64,7 +64,7 @@ h1 {
 h2 {
   color: var(--sl-color-teal);
   font-size: 1.4em;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 2em;
 }
 

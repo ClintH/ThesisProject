@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylus Physics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="main">
+    <h1>Drag the square</h1>
+    <section id="controls">
+      <div id="mode-buttons">
+        <button class="mode-btn active" data-mode="rubber">Rubber</button>
+        <button class="mode-btn" data-mode="mud">Mud</button>
+        <button class="mode-btn" data-mode="ice">Ice</button>
+        <button class="mode-btn" data-mode="magnet">Magnet</button>
+      </div>
+      <div id="mode-desc"></div>
+    </section>
+    <div id="debug"></div>
+  </section>
+  <canvas id="canvas"></canvas>
+  <script type="importmap">{ "imports": { "@ixfx":"/ixfx/core.js", "@ixfx/": "/ixfx/" } }</script>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
