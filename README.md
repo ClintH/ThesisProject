@@ -26,4 +26,4 @@ Generate static files ready for deployment to Github pages et al.
 npm run build
 ```
 
-To test static build, open up 'docs' folder in VS Code's _Live Server.
+To test static build, open up 'docs' folder in VS Code's _Live Server_.
