@@ -1,1 +1,0 @@
-const e=(e,t,n)=>typeof e!=`object`||!Array.isArray(e)||e.length===0?Array.isArray(n)?n:[n]:e.map(t);export{e as t};

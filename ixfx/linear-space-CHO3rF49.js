@@ -1,1 +1,0 @@
-import{u as e,y as t}from"./numbers-D2vV9GOh.js";import{n}from"./quantise-CXhZiWCL.js";function*r(r,i,a,o){t(e(r,``,`start`),e(i,``,`end`),e(a,``,`steps`));let s=o?n(o):e=>e,c=(i-r)/(a-1);if(t(e(c,``,`step`)),!Number.isFinite(c))throw TypeError(`Calculated step value is infinite`);for(let e=0;e<a;e++)yield s(r+c*e)}export{r as t};

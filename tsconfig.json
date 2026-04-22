@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "sourceMap": true,
+    "moduleResolution": "bundler",
+    "target": "ES2022",
+    "allowImportingTsExtensions": false,
+    "isolatedModules": true,
+    "allowJs": true,
+    "strict": true,
+    "outDir": "./docs",
+    "skipLibCheck": true,
+    "rootDirs": [
+      "docs",
+      "src"
+    ],
+    "paths": {
+      "@ixfx/lorp": [
+        "../node_modules/@ixfx/trackers/dist/index.js"
+      ],
+      "@ixfx/trackers.js": [
+        "../node_modules/@ixfx/trackers/dist/index"
+      ],
+      "@ixfx/numbers.js": [
+        "../node_modules/@ixfx/numbers/dist/index"
+      ],
+      "@ixfx/flow.js": [
+        "../node_modules/@ixfx/flow/dist/index"
+      ]
+    }
+  },
+  // "include": [
+  //   "**/*.ts"
+  // ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "docs/*"
+  ]
+}

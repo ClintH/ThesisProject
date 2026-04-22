@@ -1,58 +1,59 @@
 {
-  "name": "ixfx-demos",
+  "name": "ixfx-demos-npm",
   "version": "1.0.0",
-  "description": "Demos of ixfx",
-  "main": "index.html",
-  "private": "true",
+  "description": "",
   "type": "module",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "scripts": {
-    "clone:npm": "node copy-for-npm.js",
-    "clone:light": "node copy-for-light.js",
-    "clone": "concurrently npm:clone:*",
-    "copy:mlmodels": "copyfiles --up 3 \"../ml-vision/models/*.*\" ./ml/lib/",
-    "copy:ml": "rimraf ./ml/lib && npx copyfiles --up 3 \"../ml-vision/dist/**/*\" ./ml/lib && copyfiles --up 3 \"../ml-vision/wasm/*.*\" ./ml/lib/",
-    "serve:ws": "node ws-server.js",
-    "serve:http": "five-server",
-    "serve:express": "node express-ws-server.js",
-    "serve": "concurrently npm:serve:*",
-    "ngrok": "ngrok start --all --config ./ngrok.yml",
-    "start": "npm run serve:express",
-    "typecheck": "tsc -p jsconfig.json --noEmit"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ixfxfun/demos.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ixfxfun/demos/issues"
+  "scripts": {
+    "start": "vite --port=5175",
+    "build": "vite build",
+    "rebuild": "rm -rf docs && npm run build",
+    "ws": "node express-ws-server.js",
+    "ngrok": "ngrok start --all --config ./ngrok.yml"
   },
-  "homepage": "https://github.com/ixfxfun/demos#readme",
   "dependencies": {
-    "@html-eslint/eslint-plugin": "0.54.0",
-    "@html-eslint/parser": "0.54.0",
-    "@stylistic/eslint-plugin": "5.7.1",
-    "eslint": "9.39.2",
-    "typescript": "5.9.3"
+    "@clinth/remote": "^2.2.0",
+    "@ixfx/arrays": "latest",
+    "@ixfx/collections": "latest",
+    "@ixfx/core": "latest",
+    "@ixfx/debug": "latest",
+    "@ixfx/dom": "latest",
+    "@ixfx/events": "latest",
+    "@ixfx/flow": "latest",
+    "@ixfx/geometry": "latest",
+    "@ixfx/guards": "latest",
+    "@ixfx/io": "latest",
+    "@ixfx/iterables": "latest",
+    "@ixfx/modulation": "latest",
+    "@ixfx/numbers": "latest",
+    "@ixfx/process": "latest",
+    "@ixfx/random": "latest",
+    "@ixfx/rx": "latest",
+    "@ixfx/trackers": "latest",
+    "@ixfx/ui": "latest",
+    "@ixfx/visual": "latest",
+    "bezier-js": "6.1.4",
+    "json5": "2.2.3"
   },
   "devDependencies": {
+    "@html-eslint/eslint-plugin": "0.59.0",
+    "@html-eslint/parser": "0.59.0",
+    "@stylistic/eslint-plugin": "5.10.0",
     "body-parser": "^2.2.2",
-    "concurrently": "^9.2.1",
-    "copyfiles": "^2.4.1",
-    "cpy": "^12.1.0",
-    "del": "^8.0.1",
-    "express": "^5.2.0",
+    "eslint": "10.2.1",
+    "express": "^5.2.1",
     "express-ws": "^5.0.2",
-    "replace-in-file": "8.4.0",
-    "rimraf": "^6.1.2",
+    "globals": "17.4.0",
+    "rimraf": "6.1.3",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.57.0",
+    "vite": "7.3.1",
     "ws": "^8.19.0"
   },
   "stackblitz": {
-    "startCommand": "concurrently 'npm:serve:*'"
-  }
+    "startCommand": "npm run start"
+  },
+  "browserslist": "last 2 Chrome versions"
 }
