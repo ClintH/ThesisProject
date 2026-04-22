@@ -31,6 +31,7 @@ function getHtmlEntryFiles(srcDir) {
 
 export default defineConfig({
   root: `./src`,
+  base: `/ThesisProject/`,
   build: {
     rollupOptions: {
       input: getHtmlEntryFiles(`src`)
@@ -39,7 +40,4 @@ export default defineConfig({
   },
 });
 
-fs.copyFileSync(`index.html`, `./docs/index.html`);
-fs.copyFileSync(`demos.css`, `./docs/demos.css`);
-fs.copyFileSync(`base.css`, `./docs/base.css`);
 
