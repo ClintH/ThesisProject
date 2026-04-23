@@ -2,15 +2,15 @@
 // You shouldn't need to modify this file.
 // ----
 // Config
-const port = process.env.PORT || 8081;
-const quiet = process.env.QUIET || false;
+const port = process.env.PORT || 5555;
+const quiet = process.env.QUIET || true;
 // ---
 
 import { fileURLToPath } from 'node:url';
-import Express from 'express';
+import Express  from 'express';
 import ExpressWs from 'express-ws';
 import BodyParser from 'body-parser';
-import path, { dirname } from 'node:path';
+import path, { dirname }  from 'node:path';
 
 const ews = ExpressWs(Express());
 const app = ews.app;
@@ -27,7 +27,8 @@ app.ws(`/ws`, function (ws, request) {
     // @ts-ignore
     var clients = ews.getWss(`/ws`).clients;
     // Debug print it
-    if (!quiet) console.log(new Date().toLocaleTimeString() + `> ` + message);
+    if (!quiet)
+      console.log(new Date().toLocaleTimeString() + `> ` + message);
 
     // Broadcast it to all other clients
     for (const c of clients) {
@@ -44,10 +45,10 @@ app.ws(`/ws`, function (ws, request) {
 
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({
-  extended: false,
+  extended: false
 }));
-// app.use(CookieParser());
-app.use(Express.static(path.join(__dirname, `./dist/`)));
+//app.use(CookieParser());
+app.use(Express.static(path.join(__dirname, `./docs/`)));
 
 // catch 404 and forward to error handler
 app.use(function (request, resource, next) {
@@ -59,9 +60,12 @@ app.use(function (request, resource, next) {
 
 // error handler
 app.use(function (error, request, resource, next) {
-  if (error.status) resource.sendStatus(error.status);
-  else resource.sendStatus(500);
+  if (error.status)
+    resource.sendStatus(error.status);
+  else
+    resource.sendStatus(500);
 });
+
 
 app.listen(port);
 console.log(`Server started on port ` + port);

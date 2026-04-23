@@ -1,1 +1,0 @@
-const e=e=>typeof e==`string`?e:e instanceof Error?e.message:e;export{e as t};

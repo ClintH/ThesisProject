@@ -1,0 +1,99 @@
+:root {
+  --padding: 0.3em;
+  --padding-box: 1em;
+  --fg: var(--sl-color-white);
+  --bg: var(--sl-color-black);
+  --font: Overpass Mono, monospace;
+}
+
+:root {
+  --sl-color-accent: #ff2abf; 
+  --sl-color-accent-high: #ff55cc;
+  --sl-color-white: #000000;
+  --sl-color-teal: #000000;
+  --sl-color-black: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main > section {
+  max-width: 40em;
+}
+
+section {
+  padding: 1em;
+}
+
+section > div {
+  padding-bottom: 2em;
+}
+
+h1 {
+  color: var(--sl-color-white);
+  font-size: 3em;
+  font-weight: 400;
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  color: var(--sl-color-teal);
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-top: 2em;
+}
+
+a {
+  color: var(--sl-color-accent-high);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--sl-color-accent);
+  opacity: 0.8;
+}
+
+ul.nobullets {
+  padding: 0;
+  padding-top: calc(var(--padding) * 1.5);
+  font-weight: 500;
+}
+
+ul.nobullets li {
+  list-style: none;
+  padding-bottom: var(--padding);
+}
+
+p.description {
+  color: #424242;
+  font-size: 14px;
+}

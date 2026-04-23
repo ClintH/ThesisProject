@@ -1,0 +1,1 @@
+*{margin:0;padding:0;box-sizing:border-box}body{background:#1a1a1a;overflow:hidden}#canvas{position:fixed;top:0;left:0;touch-action:none}#debug{position:fixed;bottom:12px;left:14px;font-family:monospace;font-size:11px;color:#000;pointer-events:none}

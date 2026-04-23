@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap');
+
+*,
+*:before,
+*:after,
+html,
+body {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+  --hue: 300;
+  --font: Overpass Mono, monospace;
+  --light: hsl(var(--hue), 10%, 80%);
+  --dark: hsl(var(--hue), 80%, 5%);
+  --accent: light-dark(hsl(var(--hue), 100%, 40%),hsl(var(--hue), 100%, 80%) );
+  --accent-darker:light-dark(hsl(var(--hue), 100%, 20%),hsl(var(--hue), 100%, 40%) );
+  --bg: light-dark(var(--light), var(--dark));
+  --fg: light-dark(var(--dark), var(--light));
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+}
+
+a:link,a:visited {
+  color: light-dark(var(--dark), var(--light));
+  text-decoration-style: wavy;
+}
+a:hover {
+  color: var(--accent);
+}

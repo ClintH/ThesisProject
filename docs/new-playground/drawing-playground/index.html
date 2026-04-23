@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Drawing playground</title>
+		<script type="module" crossorigin src="/ThesisProject/assets/new-playground/drawing-playground/index-BItZ32Gf.js"></script>
+		<link rel="modulepreload" crossorigin href="/ThesisProject/assets/src-rzH1dhIm-Bd31JNlA.js">
+		<link rel="modulepreload" crossorigin href="/ThesisProject/assets/index-9gl6fXuu.js">
+		<link rel="stylesheet" crossorigin href="/ThesisProject/assets/index-DO6SSLal.css">
+	</head>
+	<body>
+		<section id="main">
+			<h1>Start scribbling</h1>
+			<section id="controls">
+				<label for="friction">friction:</label>
+				<input type="range" id="friction" min="1" max="100">
+				<span id="frictionValue"></span>
+			</section>
+
+			<section id="controls">
+				<label for="pull">pull:</label>
+				<input type="range" id="pull" min="1" max="100">
+				<span id="pullValue"></span>
+			</section>
+
+			<section id="controls">
+				<label for="weight">weight:</label>
+				<input type="range" id="weight" min="1" max="100">
+				<span id="weightValue"></span>
+			</section>
+
+			<h1 for="presets">select from presets</h1>
+			<select id="presets">
+				<option value="">
+					select a preset
+				</option>
+				<option value="floaty">floaty</option>
+				<option value="quick">quick</option>
+				<option value="lovely">lovely</option>
+				<option value="slow">slow</option>
+				<option value="eager">eager</option>
+				<option value="easy">easy</option>
+				<option value="rushed">rushed</option>
+				<option value="energetic">energetic</option>
+				<option value="shaky">shaky</option>
+				<option value="deliberate">deliberate</option>
+			</select>
+			<button id="clearBtn">Clear</button>
+			<div id="debug"></div>
+		</section>
+		<canvas id="canvas"></canvas>
+	</body>
+</html>
